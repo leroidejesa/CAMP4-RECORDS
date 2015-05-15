@@ -2,6 +2,8 @@
   <% if @venues.any?() %>
 <h2>Current Venues:</h2>
 
+<hr color="grey">
+
   <% @venues.each() do |venue| %>
     <ul>
       <li><%= venue.description() %>

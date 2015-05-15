@@ -82,11 +82,7 @@ patch("/band/venues/:id") do
   band_id = params.fetch("id").to_i()
   @band = Band.find(band_id)
   venue_ids = params.fetch("venue_ids")
-  @band.update({:venue_ids => venue_ids})
-# venue_ids.each() do |venue|
-#   @new_venue = Venue
-# end
-#testing
   @venues = Venue.all()
+  @band.update({:venue_ids => venue_ids})
   redirect to("/bands/#{band_id}/edit")
 end

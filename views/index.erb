@@ -1,0 +1,22 @@
+<h1>Camp4 Records</h1>
+
+<% if @bands.any?() %>
+
+  <h3>In consideration:</h3>
+
+  <% @bands.each() do |band| %>
+    <ul>
+      <li><a href="/bands/<%= band.id() %>"><%= band.description() %></a>
+    </ul>
+  <% end %>
+
+<% else %>
+
+  <p>no bands yet.</p>
+
+<% end %>
+
+
+
+
+<a href="/bands/new">Suggest a new band!</a><br>

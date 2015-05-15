@@ -17,7 +17,7 @@ end
 describe('path to add a venue', {:type => :feature}) do
   it('allows a user to add a venue') do
     visit('/')
-    click_link('Venue List')
+    click_link('Affiliated Venues')
     fill_in('New spot open up? Help us out, add it to the list', :with =>'The Echo')
     click_button('Update')
     click_link('Go Back')

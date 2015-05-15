@@ -71,6 +71,12 @@ post('/venues') do
   end
 end
 
+get('/venue/:id') do
+  @venue = Venue.find(params.fetch("id").to_i())
+  @capacity = 200.+(rand(9999))
+  erb(:venue)
+end
+
 get('/bands/:id/edit/venue') do
   band_id = params.fetch("id").to_i()
   @band = Band.find(band_id)

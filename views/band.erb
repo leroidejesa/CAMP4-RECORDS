@@ -5,7 +5,7 @@
 <h6><strong>VENUES PLAYED AT:</strong><br>
   <% if @bands_venues.any?() %>
     <% @bands_venues.each do |venue| %>
-    <font color="black"><%= venue.description() %></font><br>
+    <a href="/venue/<%= venue.id() %>"><%= venue.description() %></a><br>
     <% end %><h6>
   <% else %>
     this band has yet to hit the stage!

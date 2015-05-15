@@ -6,9 +6,6 @@ Completed as an assignment at Epicodus Code School, Portland, Oregon.<br>
 <br>
 DESCRIPTION<br>
 A program to track bands and the venues where they've played concerts.<br>
-Epicodus Week 4 Code Review Assignment<br>
-<br>
-
 <br>
 RAKE INSTRUCTIONS<br>
 rake db:create<br>

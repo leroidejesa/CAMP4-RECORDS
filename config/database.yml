@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: bands_and_venues_development
+
+test:
+  adapter: postgresql
+  database: bands_and_venues_test

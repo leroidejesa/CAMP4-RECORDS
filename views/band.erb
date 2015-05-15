@@ -1,4 +1,4 @@
-  <h1><%= @band.description() %> </h1>
+<div class="all"><h1><%= @band.description() %> </h1>
 
 <h6><strong>VENUES PLAYED AT:</strong><br>
   <% if @bands_venues.any?() %>
@@ -12,9 +12,7 @@
 
 
 
-#rate this band
-<br>
-#delete button
 <br><br>
-<a href="/bands/<%= @band.id() %>/edit">Enter Edit Mode</a>
+<a href="/bands/<%= @band.id() %>/edit">Enter Edit Mode</a><br><br>
 <a href="/">Home</a>
+</div>

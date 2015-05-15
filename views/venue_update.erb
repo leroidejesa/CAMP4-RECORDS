@@ -1,4 +1,5 @@
-<h1>Where have they played?</h1>
+<div class="all">
+  <h1>Where have they played?</h1>
 <% if @venues.any?() %>
 <h4>Check all that apply:</h4>
 <form action="/band/venues/<%= @band.id %>" method="post">
@@ -17,3 +18,4 @@
 
 </form>
 <% end %>
+</div>

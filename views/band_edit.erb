@@ -9,10 +9,14 @@
   <button type="submit">Submit</button>
 </form>
 
+
 <h5><a href="/bands/<%= @band.id %>/edit/venue">Edit Venue History</a></h5>
 <br>
 
-
+<form action="/bands/<%= @band.id() %>" method="post">
+  <input name="_method" type = "hidden" value="delete">
+  <button type="submit">CANCEL CONTRACT</button>
+</form>
 
 
 

@@ -49,3 +49,9 @@ patch('/bands/:id') do
     erb(:error)
   end
 end
+
+delete("/bands/:id") do
+  band = Band.find(params.fetch("id").to_i())
+  band.delete()
+  erb(:cancel_contract)
+end

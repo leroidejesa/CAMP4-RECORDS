@@ -7,10 +7,11 @@ Completed as an assignment at Epicodus Code School, Portland, Oregon.<br>
 DESCRIPTION<br>
 A program to track bands and the venues where they've played concerts.<br>
 <br>
-RAKE INSTRUCTIONS<br>
+SETUP<br>
+bundle install<br>
 rake db:create<br>
 rake db:migrate<br>
-rake db:test:prepare<br>
+ruby app.rb<br>
 <br>
 ruby version: 2.2.0<br>
 <br>

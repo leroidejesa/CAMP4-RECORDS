@@ -2,6 +2,7 @@ CAMP4 RECORDS<br>
 by Leroi Dejesa<br>
 Copyright 2015, All Rights Reserved<br>
 heroku: https://serene-sands-1845.herokuapp.com/<br>
+(note: fonts & styles may not fully show on heroku)
 <br>
 Completed as an Ruby/ActiveRecord assignment at Epicodus Code School, Portland, Oregon.<br>
 <br>

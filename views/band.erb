@@ -1,0 +1,20 @@
+<h1><%= @band.description() %> </h1>
+
+<h6><strong>VENUES:</strong><br>
+  <% if @bands_venues.any?() %>
+    <% @bands_venues.each do |venue| %>
+    <%= venue.description() %><br>
+    <% end %><h6>
+  <% else %>
+    this band has yet to hit the stage!
+  <% end %>
+<br>
+
+
+
+#rate this band
+<br>
+#delete button
+<br><br>
+
+<a href="/">Home</a>

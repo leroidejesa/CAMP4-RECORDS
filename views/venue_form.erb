@@ -1,0 +1,21 @@
+<% if @venues.any?() %>
+<h2>Current Venues:</h2>
+
+  <% @venues.each() do |venue| %>
+    <ul>
+      <li><%= venue.description() %>
+    </ul>
+  <% end %>
+
+<% else %>
+  <p>no venues yet.</p>
+<% end %>
+
+<form action="/venues" method="post">
+  <label for="name">New spot open up? Help us out, add it to the list:</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Update</button>
+</form>
+
+<a href="/">Go Back</a>

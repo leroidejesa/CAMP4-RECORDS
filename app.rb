@@ -55,3 +55,20 @@ delete("/bands/:id") do
   band.delete()
   erb(:cancel_contract)
 end
+
+get('/venues/new') do
+  @venues = Venue.all()
+  erb(:venue_form)
+end
+
+post('/venues') do
+  name = params.fetch('name')
+  @new_venue = Venue.new({:description => name})
+  if @new_venue.save()
+    redirect to("/venues/new")
+  else
+    @bands = Band.all()
+    @venues = Venue.all()
+    erb(:index)
+  end
+end

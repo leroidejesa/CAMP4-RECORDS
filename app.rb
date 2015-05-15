@@ -30,3 +30,22 @@ get('/bands/:id') do
   @bands_venues = @band.venues()
   erb(:band)
 end
+
+get('/bands/:id/edit') do
+  @band = Band.find(params.fetch("id").to_i())
+  @venues = Venue.all()
+  @bands_venues = @band.venues()
+  erb(:band_edit)
+end
+
+patch('/bands/:id') do
+  @band = Band.find(params.fetch("id").to_i())
+  description = params.fetch("description")
+  @band.update({:description => description})
+  @venues = @band.venues()
+  if @band.save()
+    redirect to("/bands/#{@band.id}/edit")
+  else
+    erb(:error)
+  end
+end

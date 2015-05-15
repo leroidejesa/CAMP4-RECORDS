@@ -2,7 +2,7 @@ CAMP4 RECORDS<br>
 by Leroi Dejesa<br>
 Copyright 2015, All Rights Reserved<br>
 <br>
-Completed as an assignment at Epicodus Code School, Portland, Oregon.<br>
+Completed as an Ruby/ActiveRecord assignment at Epicodus Code School, Portland, Oregon.<br>
 <br>
 DESCRIPTION<br>
 A program to track bands and the venues where they've played concerts.<br>

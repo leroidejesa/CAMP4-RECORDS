@@ -1,6 +1,6 @@
 <h1><%= @band.description() %> </h1>
 
-<h6><strong>VENUES:</strong><br>
+<h6><strong>VENUES PLAYED AT:</strong><br>
   <% if @bands_venues.any?() %>
     <% @bands_venues.each do |venue| %>
     <%= venue.description() %><br>

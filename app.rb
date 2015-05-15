@@ -20,7 +20,7 @@ post('/bands') do
     redirect to("/bands/#{@new_band.id}")
   else
     @bands = Band.all()
-    erb(:index)
+    erb(:error)
   end
 end
 
@@ -67,8 +67,26 @@ post('/venues') do
   if @new_venue.save()
     redirect to("/venues/new")
   else
-    @bands = Band.all()
-    @venues = Venue.all()
-    erb(:index)
+    erb(:error)
   end
+end
+
+get('/bands/:id/edit/venue') do
+  band_id = params.fetch("id").to_i()
+  @band = Band.find(band_id)
+  @venues = Venue.all()
+  erb(:venue_update)
+end
+
+patch("/band/venues/:id") do
+  band_id = params.fetch("id").to_i()
+  @band = Band.find(band_id)
+  venue_ids = params.fetch("venue_ids")
+  @band.update({:venue_ids => venue_ids})
+# venue_ids.each() do |venue|
+#   @new_venue = Venue
+# end
+#testing
+  @venues = Venue.all()
+  redirect to("/bands/#{band_id}/edit")
 end

@@ -1,0 +1,19 @@
+<h1>Where have they played?</h1>
+<% if @venues.any?() %>
+<h4>Check all that apply:</h4>
+<form action="/band/venues/<%= @band.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <% @venues.each() do |venue| %>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="venue_ids[]" value="<%= venue.id() %>"><%= venue.description() %>
+      </label>
+    </div>
+  <% end %>
+  <button type="submit">Update</button>
+  <% else %>
+  <h3>no venues yet!</h3>
+
+</form>
+<% end %>
